@@ -17,7 +17,6 @@ import java.util.*
 class createMatch() : AppCompatActivity() {
     var score = 0
     var score3 = 0
-    private lateinit var dao: matchViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +38,7 @@ class createMatch() : AppCompatActivity() {
 
         var score1 = findViewById(R.id.score1) as TextView
         var score2 = findViewById(R.id.score2) as TextView
+
         btn1.setOnClickListener(){
             score += 1
             score1.setText(score.toString())
@@ -71,6 +71,8 @@ class createMatch() : AppCompatActivity() {
             score2.setText("-")
             team1.setText("Team1")
             team2.setText("Team2")
+            val mintent1 = Intent(this, HomeActivity::class.java)
+            startActivity(mintent1)
 
         }
         save.setOnClickListener {
@@ -79,11 +81,22 @@ class createMatch() : AppCompatActivity() {
             val team2 = findViewById(R.id.txtTeam2) as EditText
             var date = SimpleDateFormat("yyyy/mm/dd", Locale.getDefault()).toString()
             val data = matchEntitie(0,team1.text.toString(),team2.text.toString(),score,score3,date)
+            val dao = matchViewModel(application)
             dao.insert(data)
+
+            score=0
+            score3=0
+            score1.setText("-")
+            score2.setText("-")
+            team1.setText("Team1")
+            team2.setText("Team2")
+            val mintent1 = Intent(this, HomeActivity::class.java)
+            startActivity(mintent1)
 
 
 
         }
+
 
     }
 

@@ -18,9 +18,8 @@ class showMatches : AppCompatActivity() {
         val adapter = matchAdapter(this)
         recyclerView.adapter=adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
-
-        matchViewModel = ViewModelProviders.of(this).get(matchViewModel::class.java)
-        matchViewModel.allMatches.observe(this, Observer {
+        val dao = matchViewModel(application)
+        dao.allMatches.observe(this, Observer {
             match -> match?.let { adapter.setMatches(it) }
         })
 

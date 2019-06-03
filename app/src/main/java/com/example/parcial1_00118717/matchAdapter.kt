@@ -17,11 +17,11 @@ class matchAdapter internal constructor(
     private var match = emptyList<matchEntitie>()
 
     inner class matchViewHolder(matchView: View):RecyclerView.ViewHolder(matchView){
-        val t1: TextView=matchView.findViewById(R.id.txtT1)
-        val t2: TextView=matchView.findViewById(R.id.txtT2)
-        val p1: EditText=matchView.findViewById(R.id.lblscore1)
-        val p2: EditText=matchView.findViewById(R.id.lblscore2)
-        val date: TextView=matchView.findViewById(R.id.txtDate)
+        val t1: EditText=matchView.findViewById(R.id.txtT1)
+        val t2: EditText=matchView.findViewById(R.id.txtT2)
+        val p1: TextView=matchView.findViewById(R.id.lblscore1)
+        val p2: TextView=matchView.findViewById(R.id.lblscore2)
+        val date: EditText=matchView.findViewById(R.id.txtDate)
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): matchViewHolder {
         val matcView = inflater.inflate(R.layout.match_item, parent, false)
@@ -34,11 +34,11 @@ class matchAdapter internal constructor(
 
     override fun onBindViewHolder(holder: matchViewHolder, position: Int) {
         val current = match[position]
-        holder.t1.text = current.team1
-        holder.t2.text = current.team2
-        holder.p1.setText(current.p1)
-        holder.p2.setText(current.p2)
-        holder.date.text = current.date
+        holder.t1.setText(current.team1)
+        holder.t2.setText(current.team2)
+        holder.p1.setText(current.p1.toString())
+        holder.t2.setText(current.p2.toString())
+        holder.date.setText(current.date.toString())
 
     }
     internal fun setMatches(match: List<matchEntitie>){
