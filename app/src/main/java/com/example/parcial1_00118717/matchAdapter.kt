@@ -37,7 +37,7 @@ class matchAdapter internal constructor(
         holder.t1.setText(current.team1)
         holder.t2.setText(current.team2)
         holder.p1.setText(current.p1.toString())
-        holder.t2.setText(current.p2.toString())
+        holder.p2.setText(current.p2.toString())
         holder.date.setText(current.date.toString())
 
     }
