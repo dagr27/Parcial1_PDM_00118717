@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".createMatch"
+        android:background="@color/bacHome">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:gravity="center"
+                    android:background="@drawable/user_back">
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerInParent="true"
+                      android:orientation="vertical"
+                      android:gravity="center">
+
+            <ImageView android:layout_width="75dp"
+                       android:layout_height="75dp"
+                       android:src="@drawable/logo2"/>
+            <TextView android:layout_width="300dp"
+                      android:layout_height="35dp"
+                      android:id="@+id/lblUsername"
+                      android:textAlignment="center"
+                      android:textSize="30dp"
+                      android:text="Crear Partido"
+                      android:fontFamily="monospace"
+                      android:textColor="#fff"
+            />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:useDefaultMargins="true"
+            android:gravity="center"
+            android:padding="10dp">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center">
+            <LinearLayout
+                    android:layout_margin="1dp"
+                    android:layout_width="175dp"
+                    android:layout_height="175dp"
+                    android:orientation="vertical"
+                    android:scaleType="centerCrop"
+                    android:gravity="center"
+                    android:background="@drawable/team">
+                <EditText android:layout_width="150dp"
+                          android:id="@+id/txtTeam1"
+                          android:layout_gravity="center_horizontal"
+                          android:layout_height="35dp"
+                          android:textAlignment="center"
+                          android:textSize="15dp"
+                          android:text="Team 1"
+                          android:fontFamily="monospace"
+                          android:textColor="#fff"
+                />
+                <TextView android:layout_width="150dp"
+                          android:layout_gravity="center_horizontal"
+                          android:layout_height="35dp"
+                          android:textAlignment="center"
+                          android:textSize="20dp"
+                          android:id="@+id/score1"
+                          android:text="-"
+                          android:fontFamily="monospace"
+                          android:textColor="#fff"
+                />
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                              android:gravity="center">
+
+                    <Button android:id="@+id/btn1s1"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/btn_log"
+                            android:text="+1"
+                            android:textSize="10dp"
+                            android:textColor="#fff"
+                    />
+                    <Button android:id="@+id/btn1s2"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/btn_log"
+                            android:text="+2"
+                            android:textSize="10dp"
+                            android:textColor="#fff"
+                    />
+                    <Button android:id="@+id/btn1s3"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/btn_log"
+                            android:text="+3"
+                            android:textSize="10dp"
+                            android:textColor="#fff"
+                    />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_margin="1dp"
+                    android:layout_columnSpan="1"
+                    android:layout_rowSpan="1"
+                    android:layout_width="175dp"
+                    android:layout_height="175dp"
+                    android:layout_column="1"
+                    android:layout_row="0"
+                    android:orientation="vertical"
+                    android:scaleType="centerCrop"
+                    android:gravity="center"
+                    android:background="@drawable/team">
+                <EditText android:layout_width="150dp"
+                          android:id="@+id/txtTeam2"
+                          android:layout_gravity="center_horizontal"
+                          android:layout_height="35dp"
+                          android:textAlignment="center"
+                          android:textSize="15dp"
+                          android:text="Team 2"
+                          android:fontFamily="monospace"
+                          android:textColor="#fff"
+                />
+                <TextView android:layout_width="150dp"
+                          android:layout_gravity="center_horizontal"
+                          android:layout_height="35dp"
+                          android:textAlignment="center"
+                          android:textSize="20dp"
+                          android:id="@+id/score2"
+                          android:text="-"
+                          android:fontFamily="monospace"
+                          android:textColor="#fff"
+                />
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                              android:gravity="center">
+
+                    <Button android:id="@+id/btn2s1"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/btn_log"
+                            android:text="+1"
+                            android:textSize="10dp"
+                            android:textColor="#fff"
+                    />
+                    <Button android:id="@+id/btn2s2"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/btn_log"
+                            android:text="+2"
+                            android:textSize="10dp"
+                            android:textColor="#fff"
+                    />
+                    <Button android:id="@+id/btn2s3"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/btn_log"
+                            android:text="+3"
+                            android:textSize="10dp"
+                            android:textColor="#fff"
+                    />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button android:layout_row="1"
+                android:layout_marginTop="10dp"
+                android:id="@+id/btnResult"
+                android:gravity="center"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_home"
+                android:textColor="#fff"
+                android:backgroundTint="#1DB954"
+                android:text="Terminar Encuentro"
+                android:textSize="20dp"
+        />
+        <Button android:layout_row="1"
+                android:layout_marginTop="10dp"
+                android:id="@+id/goBack"
+                android:gravity="center"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_home"
+                android:textColor="#fff"
+                android:text="Cancelar"
+                android:drawableLeft="@drawable/ic_arrow_back_black_24dp"
+                android:textSize="20dp"
+        />
+
+    </LinearLayout>
+
+</LinearLayout>
